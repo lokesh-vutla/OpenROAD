@@ -50,7 +50,10 @@ namespace odb {
 inline constexpr uint32_t kSchemaMajor = 0;  // Not used...
 inline constexpr uint32_t kSchemaInitial = 57;
 
-inline constexpr uint32_t kSchemaMinor = 145;  // Current revision number
+inline constexpr uint32_t kSchemaMinor = 146;  // Current revision number
+
+// Revision where LEF58 core edge length rule was added
+inline constexpr uint32_t kSchemaLef58CoreEdgeLengthRule = 146;
 
 // Revision where LEF58 implant spacing rule was added
 inline constexpr uint32_t kSchemaLef58ImplantSpacingRule = 145;
