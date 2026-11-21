@@ -64,6 +64,12 @@ bool _dbTechLayerCornerSpacingRule::operator==(
   if (flags_.corner_to_corner != rhs.flags_.corner_to_corner) {
     return false;
   }
+  if (flags_.aligned_only != rhs.flags_.aligned_only) {
+    return false;
+  }
+  if (flags_.check_implant_group_only != rhs.flags_.check_implant_group_only) {
+    return false;
+  }
   if (within_ != rhs.within_) {
     return false;
   }
@@ -405,6 +411,35 @@ bool dbTechLayerCornerSpacingRule::isCornerToCorner() const
   _dbTechLayerCornerSpacingRule* obj = (_dbTechLayerCornerSpacingRule*) this;
 
   return obj->flags_.corner_to_corner;
+}
+
+void dbTechLayerCornerSpacingRule::setAlignedOnly(bool aligned_only)
+{
+  _dbTechLayerCornerSpacingRule* obj = (_dbTechLayerCornerSpacingRule*) this;
+
+  obj->flags_.aligned_only = aligned_only;
+}
+
+bool dbTechLayerCornerSpacingRule::isAlignedOnly() const
+{
+  _dbTechLayerCornerSpacingRule* obj = (_dbTechLayerCornerSpacingRule*) this;
+
+  return obj->flags_.aligned_only;
+}
+
+void dbTechLayerCornerSpacingRule::setCheckImplantGroupOnly(
+    bool check_implant_group_only)
+{
+  _dbTechLayerCornerSpacingRule* obj = (_dbTechLayerCornerSpacingRule*) this;
+
+  obj->flags_.check_implant_group_only = check_implant_group_only;
+}
+
+bool dbTechLayerCornerSpacingRule::isCheckImplantGroupOnly() const
+{
+  _dbTechLayerCornerSpacingRule* obj = (_dbTechLayerCornerSpacingRule*) this;
+
+  return obj->flags_.check_implant_group_only;
 }
 
 dbTechLayerCornerSpacingRule* dbTechLayerCornerSpacingRule::create(
