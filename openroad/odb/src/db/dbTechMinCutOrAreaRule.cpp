@@ -306,6 +306,13 @@ dbTechMinEncRule* dbTechMinEncRule::create(dbTechLayer* inly)
   return ((dbTechMinEncRule*) newrule);
 }
 
+void dbTechMinEncRule::destroy(dbTechMinEncRule* rule)
+{
+  _dbTechMinEncRule* r = (_dbTechMinEncRule*) rule;
+  _dbTechLayer* layer = (_dbTechLayer*) r->getOwner();
+  layer->min_enc_rules_tbl_->destroy(r);
+}
+
 dbTechMinEncRule* dbTechMinEncRule::getMinEncRule(dbTechLayer* inly,
                                                   uint32_t dbid)
 {
