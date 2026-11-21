@@ -50,7 +50,10 @@ namespace odb {
 inline constexpr uint32_t kSchemaMajor = 0;  // Not used...
 inline constexpr uint32_t kSchemaInitial = 57;
 
-inline constexpr uint32_t kSchemaMinor = 142;  // Current revision number
+inline constexpr uint32_t kSchemaMinor = 143;  // Current revision number
+
+// Revision where LEF58 max spacing width/length was added
+inline constexpr uint32_t kSchemaLef58MaxSpacingWidthLength = 143;
 
 // Revision where dbTechLayerCutEnclosureTableDefRule was added
 inline constexpr uint32_t kSchemaCutEnclosureTableDefRule = 142;
